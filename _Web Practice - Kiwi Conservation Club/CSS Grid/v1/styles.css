@@ -1,0 +1,9 @@
+html {
+	background-color: blue;
+}
+
+.wrapper {
+	display: grid;
+	background-color: white;
+	grid-template-rows: 50px 70px 100px;
+}

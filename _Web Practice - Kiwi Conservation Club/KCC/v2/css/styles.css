@@ -1,0 +1,156 @@
+/*IMPORT GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1000px 1fr;
+	grid-template-rows: 200px 50px 20px 300px;
+	background-color: green;
+	padding: 0;
+	margin: 0;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+#header {
+	display: flex;
+	grid-column: 1/4;
+	background-position: top;
+	color: white;
+	background-positon: center;
+	animation: background-animate 7s infinite;
+}
+
+#header h1 {
+	align-self: flex-end;
+}
+
+#banner {
+	display: grid;
+	position:absolute;
+	width:100%;
+	height: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	margin: -20px;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0);
+	overflow: hidden;
+}
+
+#banner div{
+	padding: 0;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
+	/*background-color: rgba(0, 0, 0, 0);*/
+}
+
+.banner_background {
+	animation: banner_animate_behind 1s;
+	width: calc(100% / 5);
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	display: flex;
+}
+
+#banner_1 {background-image: url(../images/tuatara_background.jpg);}
+#banner_2 {background-image: url(../images/tuatara_background.jpg);}
+#banner_3 {background-image: url(../images/tuatara_background.jpg);}
+#banner_4 {background-image: url(../images/tuatara_background.jpg);}
+#banner_5 {background-image: url(../images/tuatara_background.jpg);}
+
+.banner_background img {
+	width: 100%;
+	self-align: flex-end;
+}
+
+@keyframes banner_animate_behind {
+	0% {
+		margin-top: 100px;
+	}
+	
+	100% {
+		margin-top: 0;
+	}
+}
+
+@keyframes background-animate {
+	0% {
+		filter: saturate(0%);
+	}
+	
+	100% {
+		filter: saturate(100%);
+	}
+}
+
+#nav {
+	grid-column: 1/4;
+	background-color: orange;
+	padding: 0;
+	z-index: 2;
+	text-decoration: none;
+}
+
+/*Menu items*/
+#nav ul {
+	list-style-type: none;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#nav ul li{
+	display: inline-block;
+	height: 55px;
+}
+
+#nav ul li a {
+	padding: 15px;
+	color: white;
+	height: calc(100% - 30px);
+	display: inline-block;
+	transition: 1s;
+}
+
+#nav ul li:hover a{
+	background-color: darkOrange;
+	transition: 1s;
+}
+
+#nav ul li ul {
+	/*display: none;*/
+	position: absolute;
+	margin-top: -50px;
+	z-index: -1;
+	transition: 1s;
+	opacity: 0;
+	width: auto;
+}
+
+#nav ul li:hover ul {
+	display: block;
+	transition: 1s;
+	margin-top: -5px;
+	opacity: 1;
+}
+
+ul li ul li a{
+	padding: 15px;
+	background-color: orange
+}
+
+ul li ul li:hover a{
+	padding: 15px;
+	background-color: darkOrange
+}
+
+#content {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+div {
+	background-color: white;
+	padding: 20px;
+}

@@ -1,0 +1,132 @@
+/*IMPORT GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1000px 1fr;
+	grid-template-rows: 200px 50px 20px 300px;
+	background-color: #50BD3F;
+	padding: 0;
+	margin: 0;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+#header {
+	display: flex;
+	grid-column: 1/4;
+	background-position: top;
+	color: white;
+	background-positon: center;
+	animation: background-animate 7s infinite;
+}
+
+#header h1 {
+	align-self: flex-end;
+}
+
+#banner {
+	display: inherit;
+	position:absolute;
+	width:100%;
+	height: 200px;
+	text-align: center;
+	margin: -20px;
+	padding: 0;
+	overflow: hidden;
+	background-image: url(../images/tuatara_background.jpg);
+	background-size: cover;
+}
+
+#banner img {
+	margin: auto;
+}
+
+#nav {
+	grid-column: 1/4;
+	background-color: #B8743F;
+	padding: 0;
+	z-index: 2;
+	text-decoration: none;
+}
+
+/*Menu items*/
+#nav ul {
+	list-style-type: none;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+
+
+#nav ul li{
+	display: inline-block;
+	height: 55px;
+}
+
+#nav ul li a {
+	padding: 15px;
+	color: white;
+	height: calc(100% - 30px);
+	display: inline-block;
+	transition: background-color 1s;
+}
+
+#nav ul li:hover a{
+	background-color: #B83F4E;
+	transition: 1s;
+}
+
+#nav ul li ul {
+	/*display: none;*/
+	position: absolute;
+	margin-top: -5px;
+	z-index: -1;
+	transition: opacity 1s;
+	opacity: 0;
+	width: auto;
+}
+
+#nav ul li:hover ul {
+	display: block;
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+ul li ul li a{
+	padding: 15px;
+	background-color: #B83F4E;
+}
+
+ul li ul li:hover a{
+	padding: 15px;
+	background-color: #B83F4E;
+}
+
+.n_link {
+	/*Formatting for NAV links (<a> tags)*/
+	text-decoration:none;
+}
+
+#content {
+	grid-column: 2;
+	grid-row: 4;
+	display: grid;
+	grid-template-columns: 1fr 200px;
+	grid-gap: 20px;
+	border-radius: 20px;
+}
+
+div {
+	background-color: white;
+	padding: 20px;
+}
+
+aside {
+	grid-column: 2;
+	border-radius: 20px;
+	background-color: #50BD3F;
+	padding: 20px;
+	color: white;
+}

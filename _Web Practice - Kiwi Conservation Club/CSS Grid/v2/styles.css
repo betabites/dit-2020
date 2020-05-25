@@ -1,0 +1,10 @@
+html {
+	background-color: blue;
+}
+
+.wrapper {
+	display: grid;
+	background-color: white;
+	grid-template-rows: 50px 70px 100px;
+	grid-template-columns: 1fr 1fr 2fr;
+}

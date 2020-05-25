@@ -1,0 +1,130 @@
+/*IMPORT GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 150px 60px;
+	font-family: Source Sans Pro
+}
+
+#header {
+	background-image: url("../images/banner_1(2).jpg");
+	background-attachment: fixed;
+	background-color: lightBlue;
+}
+
+#nav {
+	background-color: black;
+	color: white;
+}
+
+#menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	display: inline-block;
+	padding: 20px;
+}
+
+#menu li ul {
+	display: none;
+	background-color: none;
+	margin: 20px 0;
+	background-color: blue;
+}
+
+#menu li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+#menu li ul li {
+	display: block;
+}
+
+#menu li ul {
+	padding: 0;
+	margin-left: -20px;
+	min-width: 100px;
+}
+
+#content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.left_two {
+	grid-columns: 1/2;
+}
+
+.right_two {
+	grid-columns: 2/3;
+}
+
+#content div img {
+	width: 100%;
+}
+
+.full-width {
+	grid-column: 1/4;
+}
+
+.img-slider {
+	display: flex;
+	grid-column: 1/4;
+	overflow-x: scroll;
+	width: calc(100% - 20px);
+}
+
+.img-slider div {
+	margin: 0 20px 0 0;
+}
+
+#content div {
+	margin: 0 10px;
+	text-align: center;
+}
+
+.seperator {
+	grid-column: 1/4;
+	height: 50px;
+	background-image: url(../images/CaveWeta_SteveAttwood.JPG);
+	background-attachment: fixed;
+	box-shadow: inset black 0px 10px 15px;
+	margin: 0 !important;
+	width: 100% !important;
+}
+
+.img-slide {
+	box-shadow: black 0 0 10px;
+	margin-bottom: 10px !important;
+	min-width: 200px;
+	margin-top: 0;
+	transition: margin-top 1s
+}
+
+.img-slide:hover {
+	margin-top: -30px !important;
+	transition: margin-top 1s
+}
+h1 {
+	font-size: 4vw;
+}
+
+.slideinfo {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.img-slide:hover .slideinfo {
+	opacity: 1;
+	transition: opacity 1s;
+}
