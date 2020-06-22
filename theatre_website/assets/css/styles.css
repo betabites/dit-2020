@@ -51,6 +51,8 @@ h1 {
     padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 306px;
+    grid-gap: 20px;
+    padding-bottom: 20px;
 }
 
 .button {
@@ -68,12 +70,13 @@ h1 {
 #about {
     background-color: white;
     padding: 20px;
-    margin: 0 -20px;
+    /*margin: 0 -20px;*/
     display: grid;
     grid-template-columns: 305px 1fr;
     grid-gap: 20px;
     grid-column: 1/3;
-    width: calc(100% - 20px);
+    width: calc(100% - 60px);
+    border-radius: 3px;
 }
 
 #about_img {
