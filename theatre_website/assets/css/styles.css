@@ -48,6 +48,13 @@ h1 {
 #header {
     margin-top: 10px;
     background: linear-gradient(#5E0202, black);
+    padding: 20px;
+    text-align: center;
+}
+
+#mainpage_header {
+    margin-top: 10px;
+    background: linear-gradient(#5E0202, black);
     padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 306px;
@@ -76,7 +83,8 @@ h1 {
     grid-template-columns: 305px 1fr;
     grid-gap: 20px;
     grid-column: 1/3;
-    width: calc(100% - 20px);
+    width: 100%;
+    text-align: left;
 }
 
 #about_img {
@@ -144,7 +152,6 @@ h1 {
 }
 
 #footer {
-    margin-top: 475px;
     color: white;
     padding: 20px;
     background-color: #5E0202;
@@ -160,4 +167,42 @@ h1 {
     width: 20px;
     height: 20px;
     display: inline-block;
+}
+
+#registration {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5px;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 3px;
+    border: black solid 1px;
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 3px;
+    border: black solid 1px;
+    height: 300px;
+    resize: vertical;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.submit_button {
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    background-color: #5E0202;
+    grid-column: 1/3;
+    border: unset;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#header_img {
+    display: inline-block;
+    margin: 20px;
 }
