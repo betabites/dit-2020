@@ -1,122 +1,64 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Tawa Community Theatre</title>
-        <link rel="stylesheet" href="assets/css/styles.css" />
-    </head>
-    <body>
-        <div id="nav">
-            <!-- The website navigation -->
+<head>
+    <title>Tawa Community Theatre</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+<div id="nav">
+    <!-- The website navigation -->
 
-            <!-- Need to adjust logo size -->
-            <img src="assets/images/sock_and_buskin.png" id="logo" height="200"/>
+    <!-- Need to adjust logo size -->
+    <img src="../assets/images/sock_and_buskin.png" id="logo" height="200"/>
 
-            <ul id="menu">
-                <li>Contact</li>
-                <li>Gallery</li>
-                <li>About</li>
-                <li>Home</li>
-            </ul>
-        </div>
-        <div id="header">
-            <div class="header_left" style="width:390px;padding-top: 100px;">
-                <img src="assets/images/logo.svg" alt="Tawa Community Theatre" /><br>
-                <a href="about" class="button" style="width:calc(100% - 40px);">Tell Me More</a>
-            </div>
-<!--            <img src="assets/images/P1090069.JPG" style="width:100%;"/>-->
-            <div style="height: 406px; background-color: black"></div>
+    <ul id="menu">
+        <li>Contact</li>
+        <li>Gallery</li>
+        <li>About</li>
+        <li>Home</li>
+    </ul>
+</div>
+<div id="header">
+    <h1 style="color: white; text-align: center; margin-top: unset">About</h1>
 
-            <!-- The about part needs to be in the header as the gradient needs to show in a gap bellow the about section -->
-            <div id="about">
-<!--                <img src="assets/images/P1090071.JPG" id="about_img">-->
-                <div style="height: 406px; background-color: black"></div>
-                <div>
-                    <h1>About the theatre</h1>
-                    <p>Lorem Ipsum...</p>
-                </div>
-            </div>
+    <!-- The about part needs to be in the header as the gradient needs to show in a gap bellow the about section -->
+    <div id="about" style="margin-top: unset;">
+        <!--                <img src="assets/images/P1090071.JPG" id="about_img">-->
+        <div style="height: 406px; background-color: black"></div>
+        <div>
+            <h1>About the theatre</h1>
+            <p>Lorem Ipsum...</p>
         </div>
-        <!-- This section displays the upcoming shows -->
-        <div id="event_slider">
-<!--            <div>-->
-<!--                &lt;!&ndash; This is an event card &ndash;&gt;-->
-<!--                <div class="event_image visual_block" style="width:350px;"></div>-->
-<!--                <a href="" class="button" style="float:right;">Tickets</a>-->
-<!--                <h1>$25.00</h1>-->
-<!--            </div>-->
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
-            <div>
-                <div class="visual_block" style="width:100%;height:350px;">
-                </div>
-                <div class="show_content">
-                    <a class="button show_button">View Shows</a>
-                    <h1>$25.00</h1>
-                </div>
-            </div>
+    </div>
+</div>
+<!-- This section displays the upcoming shows -->
+<form>
+    <div id="registration">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="email" placeholder="Email Address" style="grid-column: 1/3">
+        <div>
+            <br>
+            Date of Birth:
         </div>
-        <div id="footer">
-            <div id="social_links">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            &copy;Copyright 2020 - Jack Hawinkels - All Rights Reserved
+        <input type="date" placeholder="Date of Birth" style="grid-column: 1/3">
+        <div>
+            <br>
+            Previous Experiences:
         </div>
-    </body>
+        <textarea style="grid-column: 1/3;">
+
+        </textarea>
+    </div>
+</form>
+<div id="footer">
+    <div id="social_links">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    &copy;Copyright 2020 - Jack Hawinkels - All Rights Reserved
+</div>
+</body>
 </html>
