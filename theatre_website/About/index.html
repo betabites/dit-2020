@@ -20,21 +20,23 @@
     </ul>
 </div>
 <div id="header">
-    <h1 style="color: white; text-align: center; margin-top: unset">About</h1>
+    <img src="../assets/images/about_header.svg" alt="About Tawa Community Theatre" id="header_img">
 
     <!-- The about part needs to be in the header as the gradient needs to show in a gap bellow the about section -->
-    <div id="about" style="margin-top: unset;">
-        <!--                <img src="assets/images/P1090071.JPG" id="about_img">-->
-        <div style="height: 406px; background-color: black"></div>
-        <div>
-            <h1>About the theatre</h1>
-            <p>Lorem Ipsum...</p>
-        </div>
-    </div>
 </div>
 <!-- This section displays the upcoming shows -->
+<div id="about" style="margin-top: unset;grid-template-columns: 1fr 305px; width: calc(100% - 40px); margin-left: 0;">
+    <!--                <img src="assets/images/P1090071.JPG" id="about_img">-->
+    <div>
+        <h1>About the theatre</h1>
+        <p>Lorem Ipsum...</p>
+    </div>
+    <div style="height: 406px; background-color: black"></div>
+</div>
+
 <form>
     <div id="registration">
+        <h1>Registration</h1><br>
         <input type="text" placeholder="First Name" />
         <input type="text" placeholder="Last Name" />
         <input type="email" placeholder="Email Address" style="grid-column: 1/3">
@@ -47,9 +49,8 @@
             <br>
             Previous Experiences:
         </div>
-        <textarea style="grid-column: 1/3;">
-
-        </textarea>
+        <textarea style="grid-column: 1/3;"></textarea>
+        <button class="submit_button">Submit</button>
     </div>
 </form>
 <div id="footer">
