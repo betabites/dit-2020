@@ -76,7 +76,7 @@ h1 {
     grid-template-columns: 305px 1fr;
     grid-gap: 20px;
     grid-column: 1/3;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 #about_img {
@@ -93,10 +93,11 @@ h1 {
 #event_slider {
     position: absolute;
     display: block;
-    width: 517px; /*When rotated, this width becomes the height*/
-    height: 100vw; /*When rotated, this height becomes the width*/
+    width: 475px; /*When rotated, this width becomes the height*/
+    height: calc(100vw - 17px); /*When rotated, this height becomes the width*/
+    max-height: 100vw;
     margin:0;
-    transform: rotate(-90deg) translateY(-517px);
+    transform: rotate(-90deg) translateY(-475px);
     transform-origin: right top;
     overflow-y: auto;
     overflow-x: hidden;
@@ -140,4 +141,23 @@ h1 {
 
 .show_content > h1 {
     margin-top: unset;
+}
+
+#footer {
+    margin-top: 475px;
+    color: white;
+    padding: 20px;
+    background-color: #5E0202;
+}
+
+#social_links {
+    float: right;
+}
+
+#social_links > div {
+    margin-left: 10px;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
 }
