@@ -1,0 +1,143 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Iceberg&display=swap');
+/*
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Iceberg', cursive;
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Iceberg', cursive;
+}
+
+#nav {
+    padding: 20px;
+    background-color: #5E0202;
+    text-align: right;
+}
+
+#logo {
+    /* The float means that the size of the logo does not affect the size of the nav div */
+    float: left;
+    width: 100px;
+    height: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu > li {
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#header {
+    margin-top: 10px;
+    background: linear-gradient(#5E0202, black);
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 306px;
+    grid-gap: 20px;
+    padding-bottom: 20px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#about {
+    background-color: white;
+    padding: 20px;
+    /*margin: 0 -20px;*/
+    display: grid;
+    grid-template-columns: 305px 1fr;
+    grid-gap: 20px;
+    grid-column: 1/3;
+    width: calc(100% - 60px);
+    border-radius: 3px;
+}
+
+#about_img {
+    height: 406px;
+    box-shadow: 0 5px 10px black;
+}
+
+.visual_block {
+    /* These divs are black rectangles that are used as placeholders */
+    background-color: black;
+    padding: unset !important;
+}
+
+#event_slider {
+    position: absolute;
+    display: block;
+    width: 517px; /*When rotated, this width becomes the height*/
+    height: 100vw; /*When rotated, this height becomes the width*/
+    margin:0;
+    transform: rotate(-90deg) translateY(-517px);
+    transform-origin: right top;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: right;
+}
+
+#event_slider > div {
+    width: 300px;
+    height: 417px;
+    transform: rotate(90deg);
+    transform-origin: right top;
+    display: inline-block;
+    box-shadow: 0 5px 20px black;
+    border-radius: 20px;
+    text-align: left;
+    overflow: hidden;
+    margin: 10px 10px -100px;
+}
+
+#event_slider > div:first-child {
+    transform: rotate(90deg) translateX(300px);
+    margin-bottom: 200px;
+}
+
+#event_slider > div > h1 {
+    margin: 0;
+}
+
+.event_image {
+    height: 400px;
+    margin: -10px -10px 10px;
+}
+
+.show_button {
+    float: right;
+}
+
+.show_content {
+    padding: 10px 10px 0;
+}
+
+.show_content > h1 {
+    margin-top: unset;
+}
