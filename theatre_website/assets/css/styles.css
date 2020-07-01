@@ -45,6 +45,29 @@ h1 {
     font-weight: bold;
 }
 
+#menu > li:hover {
+    animation: menu_item_hover 1s;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes menu_item_hover {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.5);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 #header {
     margin-top: 10px;
     background: linear-gradient(#5E0202, black);
