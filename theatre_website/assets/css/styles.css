@@ -135,16 +135,20 @@ h1 {
     text-align: right;
 }
 
-#event_slider > div {
+.event_card {
     width: 300px;
     height: 417px;
-    transform: rotate(90deg);
-    transform-origin: right top;
     display: inline-block;
     box-shadow: 0 5px 20px black;
     border-radius: 20px;
     text-align: left;
     overflow: hidden;
+    margin: 20px 10px;
+}
+
+#event_slider > div {
+    transform: rotate(90deg);
+    transform-origin: right top;
     margin: 10px 10px -100px;
 }
 
@@ -228,4 +232,16 @@ textarea {
 #header_img {
     display: inline-block;
     margin: 20px;
+}
+
+#gallery {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#gallery > .event_card {
+    width: 100%;
+    margin: 0;
 }
