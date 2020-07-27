@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Alegreya Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -188,12 +189,12 @@ h1 {
     float: right;
 }
 
-#social_links > div {
+#social_links > *, #social_links > * > * {
     margin-left: 10px;
-    background-color: black;
     width: 20px;
     height: 20px;
     display: inline-block;
+    cursor: pointer;
 }
 
 #registration {
