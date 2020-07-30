@@ -193,6 +193,7 @@ h1 {
 
 #social_links {
     float: right;
+    margin-right: 10px;
 }
 
 #social_links > *, #social_links > * > * {
