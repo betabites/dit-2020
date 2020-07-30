@@ -55,22 +55,30 @@ h1 {
     animation: menu_item_hover 1s;
 }
 
+#menu > li:hover > a {
+    color: lightblue;
+}
+
 #menu a {
     color: white;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 @keyframes menu_item_hover {
     0% {
         transform: scaleY(1);
+        color: white;
     }
 
     50% {
         transform: scaleY(1.5);
+        color: lightblue;
     }
 
     100% {
         transform: scaleY(1);
+        color: lightblue;
     }
 }
 
