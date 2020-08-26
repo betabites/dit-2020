@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tawa College EOTC 2020</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<div id="header">
+    <ul id="nav">
+        <li>Home</li>
+        <li>
+            <ul>
+                <li>Information</li><hr>
+                <li>Days Bay</li>
+                <li>Paintball</li>
+                <li>H<sup>2</sup>O Xtream</li>
+                <li>Mt. KauKau</li>
+                <li>Community<br>Service</li>
+            </ul>
+            Information
+        </li>
+        <li>Groups</li>
+    </ul>
+</div>
+<div class="med_bg_image">
+    <h1>Group Timetables</h1>
+</div>
+<input type="text" id="search" placeholder="Search" onkeyup="group_update()">
+<div class="group_box" id="group_box">
+    <div>
+        <h1>Group 1</h1>
+        <div id="group_1">
+            <div>
+                Getting group 1 members...
+            </div>
+        </div>
+        <a class="button">View Group 1 Timetable</a>
+        <a class="button">Download Group 1 Timetable</a>
+    </div>
+</div>
+<!-- Get group lists -->
+<script src="group_data.js"></script>
+<script>
+    function group_update() {
+        let search = document.getElementById("search")
+        for (let group of groups) {
+            let div = document.getElementById("group_" + group.id)
+            div.innerHTML = ""
+            for (let person of group.data) {
+                if (person.toLowerCase().startsWith(search.value.toLowerCase())) {
+                    div.innerHTML += "<div>" + person + "</div>"
+                }
+            }
+        }
+    }
+
+    document.onreadystatechange = function () {
+        let output = ""
+        let search = document.getElementById("search")
+        for (let group of groups) {
+            output += "<div><h1>Group " + group.id + "</h1><div id='group_" + group.id + "'>"
+            for (let person of group.data) {
+                if (person.toLowerCase().startsWith(search.value.toLowerCase())) {
+                    output += "<div>" + person + "</div>"
+                }
+            }
+            output += "</div></div>"
+        }
+        document.getElementById("group_box").innerHTML = output
+    }
+</script>
+<div class="sm_img_seperator"></div>
+<div class="copyright">Copyright</div>
+</body>
+</html>
