@@ -190,8 +190,9 @@ h1 {
 }
 
 #logo {
-    float: left;
     width: 100px;
+    position: absolute;
+    left: 20px;
 }
 
 .centerpoint {
