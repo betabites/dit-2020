@@ -80,6 +80,8 @@ h1 {
     height: 300px;
     background-color: grey;
     text-align: center;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .med_bg_image > h1 {
@@ -134,17 +136,15 @@ h1 {
 .group_box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
     grid-gap: 20px;
 }
 
 .group_box > div > div {
     border-radius: 20px;
     background-color: #48D9D4;
-    height: 300px;
+    max-height: 300px;
     overflow-y: scroll;
     padding: 20px;
-    border-radius: 20px;
 }
 
 .group_box > div > div > div {
@@ -162,4 +162,8 @@ h1 {
     margin: 10px 0;
     color: white;
     text-align: center;
+}
+
+#content {
+    padding: 20px;
 }

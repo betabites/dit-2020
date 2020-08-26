@@ -22,20 +22,25 @@
         <li>Groups</li>
     </ul>
 </div>
-<div class="med_bg_image">
+<div class="med_bg_image" style="background-image: url('../assets/images/Community Services/100_0958.JPG');">
     <h1>Group Timetables</h1>
 </div>
-<input type="text" id="search" placeholder="Search" onkeyup="group_update()">
-<div class="group_box" id="group_box">
-    <div>
-        <h1>Group 1</h1>
-        <div id="group_1">
-            <div>
-                Getting group 1 members...
+<div id="content">
+    <div style="text-align: center; border-radius: 20px; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.5)">
+        Search for a username:<br>
+        <input type="text" id="search" placeholder="Search" onkeyup="group_update()" style="margin: 20px; padding: 10px; border-radius: 5px; width: 100%; max-width: 700px;">
+    </div>
+    <div class="group_box" id="group_box">
+        <div>
+            <h1>Group 1</h1>
+            <div id="group_1">
+                <div>
+                    Getting group 1 members...
+                </div>
             </div>
+            <a class="button">View Group 1 Timetable</a>
+            <a class="button">Download Group 1 Timetable</a>
         </div>
-        <a class="button">View Group 1 Timetable</a>
-        <a class="button">Download Group 1 Timetable</a>
     </div>
 </div>
 <!-- Get group lists -->
