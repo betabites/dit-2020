@@ -76,6 +76,23 @@ h1 {
     background-color: black;
 }
 
+.med_bg_image {
+    height: 300px;
+    background-color: grey;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.med_bg_image > h1 {
+    background-color: rgba(0,0,0,0.75);
+    margin-top: 100px;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 .info_box {
     display: grid;
     padding: 20px;
@@ -96,4 +113,89 @@ h1 {
 
 .copyright {
     padding: 20px;
+}
+
+.group_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .group_box {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.group_box > div > div {
+    border-radius: 20px;
+    background-color: #48D9D4;
+}
+
+.group_box > div > div > div {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.group_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.group_box > div > div {
+    border-radius: 20px;
+    background-color: #48D9D4;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.group_box > div > div > div {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    animation: show_username 1.1s;
+}
+
+@keyframes show_username {
+   0% {
+       transform: scale(0);
+   }
+
+    10% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button {
+    background-color: #6ea616;
+    padding: 20px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+#content {
+    padding: 20px;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+}
+
+.centerpoint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
