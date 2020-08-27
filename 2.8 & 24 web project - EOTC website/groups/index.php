@@ -32,6 +32,7 @@
     <button class="button" style="display: inline-block; border-radius: 5px; padding: 10px;" onclick="show_search()">Search for a user!</button>
     <button class="button" style="display: none; border-radius: 5px; padding: 10px; background-color: red;margin-left: 10px;" onclick="clear_search()" id="search_clear">Clear search</button>
     <div class="group_box" id="group_box">
+        Things not loading? Try clicking <a href="javascript:clear_search()">here</a>!
 <!--        <div>-->
 <!--            <h1>Group 1</h1>-->
 <!--            <div id="group_1">-->
@@ -55,6 +56,26 @@
 <!-- Get group lists -->
 <script src="group_data.js"></script>
 <script>
+    let data = []
+    for (let i = 0; i < 70; i++) {
+        data.push(i.toString())
+    }
+    let groups = [
+        {
+            id: 1,
+            data: data,
+        },{
+            id: 2,
+            data: ["7jhawinkels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "ThePerson", "techangels", "techangels"],
+        },{
+            id: 3,
+            data: ["7jhawinkels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "ThePerson", "techangels", "techangels"],
+        },{
+            id: 4,
+            data: ["GoogleIT2", "7jhawinkels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "techangels", "ThePerson", "techangels", "techangels"],
+        }
+    ]
+
     function group_update() {
         let search = document.getElementById("search")
         for (let group of groups) {
