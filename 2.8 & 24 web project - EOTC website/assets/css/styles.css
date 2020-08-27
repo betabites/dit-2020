@@ -17,7 +17,12 @@ body {
     margin: 0;
 }
 
-#nav > li {
+#nav > a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav > a > li {
     display: inline-block;
     margin-left: 10px;
     padding: 10px 20px;
@@ -25,7 +30,7 @@ body {
     cursor: pointer;
 }
 
-#nav > li > ul {
+#nav > a > li > ul {
     display: none;
     position: absolute;
     list-style-type: none;
@@ -40,16 +45,16 @@ body {
     cursor: initial;
 }
 
-#nav > li:hover {
+#nav > a > li:hover {
     background-color: #6ea616;
     color: white;
 }
 
-#nav > li:hover > ul {
+#nav > a > li:hover > ul {
     display: inline-block;
 }
 
-#nav > li > ul > li {
+#nav > a > li > ul > li {
     padding: 10px;
     margin: 3px;
     color: white;
@@ -58,11 +63,11 @@ body {
     cursor: pointer;
 }
 
-#nav > li > ul > li:hover {
+#nav > a > li > ul > li:hover {
     background-color: #50BD3F;
 }
 
-#nav > li > ul > hr {
+#nav > a > li > ul > hr {
     color: white;
     width: 50%;
 }
@@ -98,6 +103,13 @@ h1 {
     padding: 20px;
     grid-gap: 20px;
     grid-template-columns: 400px 1fr;
+}
+
+.info_box_2 {
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 400px;
 }
 
 .img_holder {
@@ -162,9 +174,9 @@ h1 {
 }
 
 @keyframes show_username {
-   0% {
-       transform: scale(0);
-   }
+    0% {
+        transform: scale(0);
+    }
 
     10% {
         transform: scale(0);

@@ -10,19 +10,19 @@
 <div id="header">
     <img src="../assets/images/Tawa-Logo.png" id="logo">
     <ul id="nav">
-        <li>Home</li>
-        <li>
-            <ul>
-                <li>Information</li><hr>
-                <li>Days Bay</li>
-                <li>Paintball</li>
-                <li>H<sup>2</sup>O Xtream</li>
-                <li>Mt. KauKau</li>
-                <li>Community<br>Service</li>
-            </ul>
-            Information
-        </li>
-        <li>Groups</li>
+        <a href="../"><li>Home</li></a>
+        <a href=""><li>
+                <ul>
+                    <li>Information</li><hr>
+                    <li>Days Bay</li>
+                    <li>Paintball</li>
+                    <li>H<sup>2</sup>O Xtream</li>
+                    <li>Mt. KauKau</li>
+                    <li>Community<br>Service</li>
+                </ul>
+                Information
+            </li></a>
+        <a href=""><li style="background-color: #48D9D4">Groups</li></a>
     </ul>
 </div>
 <div class="med_bg_image" style="background-image: url('../assets/images/Community Services/100_0958.JPG');">
