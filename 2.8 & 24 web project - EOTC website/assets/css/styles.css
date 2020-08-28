@@ -17,12 +17,13 @@ body {
     margin: 0;
 }
 
-#nav > a {
+#nav > a, #nav > li {
     text-decoration: none;
     color: black;
+    display: inline-block;
 }
 
-#nav > a > li {
+#nav > a > li, #nav > li {
     display: inline-block;
     margin-left: 10px;
     padding: 10px 20px;
@@ -30,7 +31,7 @@ body {
     cursor: pointer;
 }
 
-#nav > a > li > ul {
+#nav > li > ul {
     display: none;
     position: absolute;
     list-style-type: none;
@@ -45,16 +46,16 @@ body {
     cursor: initial;
 }
 
-#nav > a > li:hover {
+#nav > a > li:hover, #nav > li:hover {
     background-color: #6ea616;
     color: white;
 }
 
-#nav > a > li:hover > ul {
+#nav > li:hover > ul {
     display: inline-block;
 }
 
-#nav > a > li > ul > li {
+#nav > li > ul > a > li {
     padding: 10px;
     margin: 3px;
     color: white;
@@ -63,11 +64,13 @@ body {
     cursor: pointer;
 }
 
-#nav > a > li > ul > li:hover {
+#nav > li > ul > a {text-decoration: none;}
+
+#nav > li > ul > a > li:hover {
     background-color: #50BD3F;
 }
 
-#nav > a > li > ul > hr {
+#nav > li > ul > hr {
     color: white;
     width: 50%;
 }
