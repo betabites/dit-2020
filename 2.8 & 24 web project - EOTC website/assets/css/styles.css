@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+#header {
+    background-color: #4AC266;
+    padding: 20px;
+    text-align: right;
+}
+
+#nav {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+}
+
+#nav > a, #nav > li {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+#nav > a > li, #nav > li {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#nav > li > ul {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    text-align: center;
+    color: white;
+    background-color: #6ea616;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: -30px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.75);
+    cursor: initial;
+}
+
+#nav > a > li:hover, #nav > li:hover {
+    background-color: #6ea616;
+    color: white;
+}
+
+#nav > li:hover > ul {
+    display: inline-block;
+}
+
+#nav > li > ul > a > li {
+    padding: 10px;
+    margin: 3px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#nav > li > ul > a {text-decoration: none;}
+
+#nav > li > ul > a > li:hover {
+    background-color: #50BD3F;
+}
+
+#nav > li > ul > hr {
+    color: white;
+    width: 50%;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+}
+
+.large_bg_image {
+    height: 600px;
+    background-color: black;
+}
+
+.med_bg_image {
+    height: 300px;
+    background-color: grey;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.med_bg_image > h1 {
+    background-color: rgba(0,0,0,0.75);
+    margin-top: 100px;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.info_box {
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: 400px 1fr;
+}
+
+.info_box_2 {
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 400px;
+}
+
+.img_holder {
+    background-color: black;
+    width: 100%;
+    height: 400px;
+}
+
+.sm_img_seperator {
+    height: 60px;
+    background-color: black;
+}
+
+.copyright {
+    padding: 20px;
+}
+
+.group_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .group_box {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.group_box > div > div {
+    border-radius: 20px;
+    background-color: #48D9D4;
+}
+
+.group_box > div > div > div {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.group_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.group_box > div > div {
+    border-radius: 20px;
+    background-color: #48D9D4;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.group_box > div > div > div {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    animation: show_username 1.1s;
+}
+
+@keyframes show_username {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button {
+    background-color: #6ea616;
+    padding: 20px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+#content {
+    padding: 20px;
+}
+
+#logo {
+    width: 100px;
+    position: absolute;
+    left: 20px;
+}
+
+.centerpoint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
