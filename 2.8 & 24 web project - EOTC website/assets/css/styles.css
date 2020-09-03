@@ -17,7 +17,13 @@ body {
     margin: 0;
 }
 
-#nav > li {
+#nav > a, #nav > li {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+#nav > a > li, #nav > li {
     display: inline-block;
     margin-left: 10px;
     padding: 10px 20px;
@@ -40,7 +46,7 @@ body {
     cursor: initial;
 }
 
-#nav > li:hover {
+#nav > a > li:hover, #nav > li:hover {
     background-color: #6ea616;
     color: white;
 }
@@ -49,7 +55,7 @@ body {
     display: inline-block;
 }
 
-#nav > li > ul > li {
+#nav > li > ul > a > li {
     padding: 10px;
     margin: 3px;
     color: white;
@@ -58,7 +64,9 @@ body {
     cursor: pointer;
 }
 
-#nav > li > ul > li:hover {
+#nav > li > ul > a {text-decoration: none;}
+
+#nav > li > ul > a > li:hover {
     background-color: #50BD3F;
 }
 
@@ -98,6 +106,13 @@ h1 {
     padding: 20px;
     grid-gap: 20px;
     grid-template-columns: 400px 1fr;
+}
+
+.info_box_2 {
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 400px;
 }
 
 .img_holder {
@@ -162,9 +177,9 @@ h1 {
 }
 
 @keyframes show_username {
-   0% {
-       transform: scale(0);
-   }
+    0% {
+        transform: scale(0);
+    }
 
     10% {
         transform: scale(0);
@@ -190,8 +205,9 @@ h1 {
 }
 
 #logo {
-    float: left;
     width: 100px;
+    position: absolute;
+    left: 20px;
 }
 
 .centerpoint {
