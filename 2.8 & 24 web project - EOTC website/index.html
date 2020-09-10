@@ -20,10 +20,41 @@
             </ul>
             Information
         </li>
-        <a href="../groups"><li>Groups</li></a>
+        <a href="groups"><li>Groups</li></a>
     </ul>
 </div>
-<div class="large_bg_image"></div>
+<div id="mainpage_header">
+    <div class="mainpage_hd_background" style="background-image: url('assets/images/IMG_7373.jpg'); z-index:2;" id="img1"></div>
+    <div class="mainpage_hd_background" style="" id="img2"></div>
+    <h1>EOTC Week</h1>
+    <script>
+        // Switches background images
+        let images = ['assets/images/IMG_7373.jpg', 'assets/images/IMG_6869.jpg']
+        let bgimg1
+        let bgimg2
+        window.onload = function() {
+            bgimg1 = document.getElementById("img1")
+            bgimg2 = document.getElementById("img2")
+        }
+
+        setInterval(function () {
+            bgimg2.style.backgroundImage = "url('" + images[Math.floor(Math.random() * images.length)] + "')"
+            fade_ani(1)
+        }, 5000)
+
+        function fade_ani(fade) {
+            bgimg1.style.opacity = fade
+            if (fade <= 0) {
+                bgimg1.style.backgroundImage = bgimg2.style.backgroundImage
+                bgimg1.style.opacity = 1
+            } else {
+                setTimeout(function () {
+                    fade_ani(fade - 0.1)
+                }, 100)
+            }
+        }
+    </script>
+</div>
 <div class="info_box">
     <div class="img_holder"></div>
     <div>
