@@ -34,12 +34,35 @@
     </div>
 </div>
 <div class="sm_img_seperator"></div>
-<div class="info_box_2">
-    <div>
-        <h1>Heading</h1>
-        <p>Content</p>
+<div id="download_preview" style="display: none; position: fixed; top: 0; left: 0; right: 0; height: 100vh; background-color: rgba(0,0,0,0.75);">
+    <div class="centerpoint">
+        <form style="text-align: center; border-radius: 20px; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.5); background-color: white; margin-top: -69px; margin-left: calc(-40vw - 20px); width: 80vw;">
+            <span style="float: left;" onclick="hide_download()">x</span>
+            Document Download:<br>
+            <a href="" class="button">View</a>
+            <a href="" class="button">Download</a>
+        </form>
     </div>
-    <div class="img_holder"></div>
+</div>
+<script>
+    function show_download(filename) {
+        let download_box = document.getElementById("download_preview")
+        download_box.style.display = "unset"
+        download_box.children[0].children[0].innerHTML = "<span style='float: left;cursor: pointer;' onclick='hide_download()'>x</span><strong>" + filename + "</strong><br>\n" +
+            "<a href='../assets/downloads/" + filename + "' class='button' target='_blank'>View</a>\n" +
+            "<a href='../assets/downloads/" + filename + "' class='button' download>Download</a>"
+    }
+
+    function hide_download() {
+        document.getElementById('download_preview').style.display = 'none'
+    }
+</script>
+<div class="download_box" style="padding-bottom: 0;">
+    <h1 style="margin-bottom: 0;">Document Downloads</h1>
+    <button onclick="show_download('2018_EOTC_Student_Contract.pdf')" class="button">Student Contract</button>
+    <button onclick="show_download('eotc_letter_2018.pdf')" class="button">EOTC Letter</button>
+    <button onclick="show_download('LOCAL_EOTC_Permission_form_2018.pdf')" class="button">Permission Form</button>
+    <button onclick="show_download('LOCAL_EOTC_Swimming_Consent_2018.pdf')" class="button">Swimming Consent</button>
 </div>
 <div class="sm_img_seperator"></div>
 <div class="copyright">Copyright</div>

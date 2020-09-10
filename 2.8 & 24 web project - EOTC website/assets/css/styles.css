@@ -192,12 +192,19 @@ h1 {
 
 .button {
     background-color: #6ea616;
-    padding: 20px;
-    border-radius: 20px;
-    display: block;
+    padding: 10px 20px;
+    border-radius: 3px;
+    display: inline-block;
     margin: 10px 0;
     color: white;
     text-align: center;
+    min-width: 150px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    font-size: 12pt;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
 }
 
 #content {
@@ -238,4 +245,8 @@ h1 {
     border-top: solid;
     border-bottom: solid;
     z-index: 3;
+}
+
+.download_box {
+    text-align: center;
 }
