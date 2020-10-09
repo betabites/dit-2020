@@ -27,15 +27,13 @@
     <div class="mainpage_hd_background" style="background-image: url('assets/images/IMG_7373.jpg'); z-index:2;" id="img1"></div>
     <div class="mainpage_hd_background" style="" id="img2"></div>
     <h1>EOTC Week</h1>
-    <script>
+    <script type="text/javascript" src="assets/js/slideshow.js"></script>
+    <script type="text/javascript">
         // Switches background images
         let images = ['assets/images/IMG_7373.jpg', 'assets/images/IMG_6869.jpg']
+        let slider
         let bgimg1
         let bgimg2
-        window.onload = function() {
-            bgimg1 = document.getElementById("img1")
-            bgimg2 = document.getElementById("img2")
-        }
 
         setInterval(function () {
             bgimg2.style.backgroundImage = "url('" + images[Math.floor(Math.random() * images.length)] + "')"
@@ -53,10 +51,17 @@
                 }, 100)
             }
         }
+
+        window.onload = function() {
+            bgimg1 = document.getElementById("img1")
+            bgimg2 = document.getElementById("img2")
+            slider = new slideshow(images, "slider", 400)
+        }
     </script>
 </div>
 <div class="info_box">
-    <div class="img_holder"></div>
+    <div class="img_holder slider" id="slider">
+    </div>
     <div>
         <h1>Heading</h1>
         <p>Content</p>
