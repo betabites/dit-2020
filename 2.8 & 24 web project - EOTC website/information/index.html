@@ -49,19 +49,19 @@
         let download_box = document.getElementById("download_preview")
         download_box.style.display = "unset"
         download_box.children[0].children[0].innerHTML = "<span style='float: left;cursor: pointer;' onclick='hide_download()'>x</span><strong>" + filename + "</strong><br>\n" +
-            "<a href='../assets/downloads/" + filename + "' class='button' target='_blank'>View</a>\n" +
-            "<a href='../assets/downloads/" + filename + "' class='button' download>Download</a>"
+            "<a href='../assets/downloads/" + filename + "' class='button' target='_blank' onclick='hide_download()'>View</a>\n" +
+            "<a href='../assets/downloads/" + filename + "' class='button' onclick='hide_download()' download>Download</a>"
     }
 
     function hide_download() {
         document.getElementById('download_preview').style.display = 'none'
     }
 </script>
-<div class="download_box" style="padding-bottom: 0;">
+<div class="download_box" style="text-align:center;padding-bottom: 0;">
     <h1 style="margin-bottom: 0;">Document Downloads</h1>
     <button onclick="show_download('2018_EOTC_Student_Contract.pdf')" class="button">Student Contract</button>
     <button onclick="show_download('eotc_letter_2018.pdf')" class="button">EOTC Letter</button>
-    <button onclick="show_download('LOCAL_EOTC_Permission_form_2018.pdf')" class="button">Permission Form</button>
+    <button onclick="show_download('LOCAL_EOTC_Permission_Form_2018.pdf')" class="button">Permission Form</button>
     <button onclick="show_download('LOCAL_EOTC_Swimming_Consent_2018.pdf')" class="button">Swimming Consent</button>
 </div>
 <div class="sm_img_seperator"></div>
