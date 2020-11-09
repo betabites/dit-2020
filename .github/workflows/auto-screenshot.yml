@@ -25,5 +25,5 @@ jobs:
         uses: swinton/screenshot-website@v1.0.0
         with:
           # Source of the content to be captured, may be a URL or HTML content
-          source: https://7jhawinkels.atwebpages.com/
+          source: http://7jhawinkels-dit.atwebpages.com/
           # The destination filename the captured website will be written to
