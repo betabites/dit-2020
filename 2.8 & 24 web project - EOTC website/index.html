@@ -3,6 +3,10 @@
 <head>
     <title>Tawa College EOTC 2020</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Load icons from Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </head>
 <body>
 <div id="header">
@@ -24,58 +28,102 @@
     </ul>
 </div>
 <div id="mainpage_header">
-    <div class="mainpage_hd_background" style="background-image: url('assets/images/IMG_7373.jpg'); z-index:2;" id="img1"></div>
-    <div class="mainpage_hd_background" style="" id="img2"></div>
+    <div class="mainpage_hd_background" style="background-image: url('assets/images/IMG_7373.jpg'); z-index:2; background-attachment: fixed;" id="img1"></div>
     <h1>EOTC Week</h1>
-    <script type="text/javascript" src="assets/js/slideshow.js"></script>
-    <script type="text/javascript">
-        // Switches background images
-        let images = ['assets/images/IMG_7373.jpg', 'assets/images/IMG_6869.jpg']
-        let slider
-        let bgimg1
-        let bgimg2
-
-        setInterval(function () {
-            bgimg2.style.backgroundImage = "url('" + images[Math.floor(Math.random() * images.length)] + "')"
-            fade_ani(1)
-        }, 5000)
-
-        function fade_ani(fade) {
-            bgimg1.style.opacity = fade
-            if (fade <= 0) {
-                bgimg1.style.backgroundImage = bgimg2.style.backgroundImage
-                bgimg1.style.opacity = 1
-            } else {
-                setTimeout(function () {
-                    fade_ani(fade - 0.1)
-                }, 100)
-            }
-        }
-
-        window.onload = function() {
-            bgimg1 = document.getElementById("img1")
-            bgimg2 = document.getElementById("img2")
-            slider = new slideshow(images, "slider", 400)
-        }
-    </script>
 </div>
-<div class="info_box">
-    <div class="img_holder slider" id="slider">
-    </div>
-    <div>
-        <h1>Heading</h1>
-        <p>Content</p>
-    </div>
-</div>
-<div class="sm_img_seperator"></div>
 <div class="info_box_2">
     <div>
-        <h1>Heading</h1>
-        <p>Content</p>
+        <p>As part of the Year 10 programme students will be participating in four days of <strong>Education Outside the Classroom (EOTC)</strong>. The focus of this programme is one of citizenship and social awareness.
+            <br><br>The four days of activities in which your son/daughter will participate are as follows:
+        </p>
     </div>
-    <div class="img_holder"></div>
+    <div>
+        <div style="display:grid;grid-template-columns: 1fr 1fr; column-gap: 10px;">
+            <a href="" class="button">Kayaking <sub>(Days Bay)</sub></a>
+            <a href="" class="button">Cycling <sub>(Days Bay)</sub></a>
+            <a href="" class="button">Laser Paintball</a>
+            <a href="" class="button">H<sup>2</sup>O Extreme</a>
+            <a href="" class="button">Mt KauKau Walk</a>
+            <a href="" class="button">Community Service</a>
+
+        </div>
+    </div>
 </div>
-<div class="sm_img_seperator"></div>
+<div class="sm_img_seperator" style="background-image: url('assets/images/IMG_6869.jpg'); background-attachment: fixed;"><div></div></div>
+<div class="info_box">
+    <div>
+        <div class="img_holder img_slider">
+            <div class="slide fade">
+                <div class="numberText">1 / 4</div>
+                <img src="assets/images/IMG_7373.jpg" style="width: 100%" />
+                <div class="text"></div>
+            </div>
+            <div class="slide fade">
+                <div class="numberText">2 / 4</div>
+                <img src="assets/images/IMG_2791.jpg" style="width: 100%" />
+                <div class="text"></div>
+            </div>
+            <div class="slide fade">
+                <div class="numberText">3 / 4</div>
+                <img src="assets/images/IMG_6869.jpg" style="width: 100%" />
+                <div class="text"></div>
+            </div>
+            <div class="slide fade">
+                <div class="numberText">4 / 4</div>
+                <img src="assets/images/IMG_6869.jpg" style="width: 100%" />
+                <div class="text"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </div>
+    <div>
+        <h1>Contact</h1>
+        Mrs Gemma Lodge, <a href="https://tawacollege.school.nz/">Tawa College</a>
+
+        <ul id="contact_info">
+            <li><i class="fas fa-phone"></i>  <a href="tel:042328184">04 232 8184</a></li>
+            <li><i class="fas fa-envelope"></i>  <a href="mailto:secretary@tawacollege.school.nz">secretary@tawacollege.school.nz</a></li>
+        </ul>
+        </p>
+    </div>
+</div>
+<div class="sm_img_seperator" style="background-image: url('assets/images/IMG_6869.jpg'); background-attachment: fixed;"><div></div></div>
 <div class="copyright">Copyright</div>
 </body>
 </html>

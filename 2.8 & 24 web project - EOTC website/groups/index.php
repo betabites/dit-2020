@@ -133,7 +133,7 @@ if ($_SERVER["REMOTE_ADDR"] == "122.56.185.33") {
                         output += "<div>" + person + "</div>"
                     }
                 }
-                output += "</div><a class='button'>View Timetable</a><a class='button'>Download Timetable</a></div>"
+                output += "</div><a class='button' style='width: calc(100% - 40px)'>View Timetable</a><a class='button' style='width: calc(100% - 40px); margin-top: 0;'>Download Timetable</a></div>"
             }
             document.getElementById("group_box").innerHTML = output
         }
