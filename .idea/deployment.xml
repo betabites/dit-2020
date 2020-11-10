@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="AWARDSPACE" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="AWARDSPACE">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/2.8 &amp; 24 web project - EOTC website" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
